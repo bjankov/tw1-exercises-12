@@ -32,6 +32,7 @@ namespace PokemonManagement.BL.Services
 
         public void Evolve(TrainerPokemon ownedPokemon)
         {
+            // Komentar za aktivaciju actionsa
             if (ownedPokemon.Level < 16) throw new  PokemonLogicException("level too low");
             if (ownedPokemon.Trainer.Candies < 50) throw new  PokemonLogicException("not enough candies");
             if (ownedPokemon.Pokemon.EvolvesToId == null) throw new PokemonLogicException("pokemon has no available evolutions");
